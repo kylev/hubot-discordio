@@ -30,6 +30,8 @@ class DiscordIOAdapter extends Adapter
     @client.disconnect()
 
   _clientReady: (event) =>
+    @robot.alias = "<@#{@client.id}>"
+
     @robot.logger.info("Discord connected")
     @emit("connected")
 

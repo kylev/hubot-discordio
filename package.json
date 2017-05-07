@@ -1,0 +1,25 @@
+{
+  "name": "hubot-discordio",
+  "version": "0.1.0",
+  "description": "Hubot adapter using discord.io",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kylev/hubot-discordio.git"
+    },
+  "main": "src/discordio.coffee",
+  "keywords": [
+    "discord",
+    "hubot"
+  ],
+  "author": "Kyle VanderBeek",
+  "license": "MIT",
+  "dependencies": {
+    "discord.io": ">= 2.5"
+  },
+  "peerDependencies": {
+    "hubot": ">= 2.0"
+  },
+  "devDependencies": {
+    "coffee-script": ">= 1.2.0"
+  }
+}

@@ -35,14 +35,14 @@ class DiscordIOAdapter extends Adapter
     @robot.logger.info("Discord connected")
     @emit("connected")
 
-  _clientMessage: (user, userID, channelID, message, event) =>
-    if userID == @client.id
+  _clientMessage: (user, userId, channelId, message, event) =>
+    if userId == @client.id
       return
 
-    if @client.directMessages[channelID]
+    if @client.directMessages[channelId]
       message = "#{@robot.name} #{message}"
 
-    u = new User(userID, name: user.username, room: channelID)
+    u = new User(userId, name: user.username, room: channelId)
     @robot.receive(new TextMessage(u, message, event.d.id))
 
   _clientDisconnect: (errorMessage, code) =>
